@@ -11,6 +11,30 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import client, {
+  ClientState
+} from 'app/entities/client/client.reducer';
+// prettier-ignore
+import adresse, {
+  AdresseState
+} from 'app/entities/adresse/adresse.reducer';
+// prettier-ignore
+import produit, {
+  ProduitState
+} from 'app/entities/produit/produit.reducer';
+// prettier-ignore
+import typeDeProduit, {
+  TypeDeProduitState
+} from 'app/entities/type-de-produit/type-de-produit.reducer';
+// prettier-ignore
+import commande, {
+  CommandeState
+} from 'app/entities/commande/commande.reducer';
+// prettier-ignore
+import produitCommande, {
+  ProduitCommandeState
+} from 'app/entities/produit-commande/produit-commande.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +47,12 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly client: ClientState;
+  readonly adresse: AdresseState;
+  readonly produit: ProduitState;
+  readonly typeDeProduit: TypeDeProduitState;
+  readonly commande: CommandeState;
+  readonly produitCommande: ProduitCommandeState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +67,12 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  client,
+  adresse,
+  produit,
+  typeDeProduit,
+  commande,
+  produitCommande,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar,
 });
